@@ -12,6 +12,15 @@ add_action( 'init', 'post_types_rest_support', 25 );
 function post_types_rest_support() {
     global $wp_post_types;
 
+
+     //Añadimos pages al REST
+    if( isset( $wp_post_types[ 'pages' ] ) ) {
+            $wp_post_types['pages']->show_in_rest = true;
+            //setting ENDPOINT to portfolios
+            $wp_post_types['pages']->rest_base = 'pages';
+            $wp_post_types['pages']->rest_controller_class = 'WP_REST_Posts_Controller';
+    }
+
     //Añadimos portfolio_page al REST
     if( isset( $wp_post_types[ 'portfolio_page' ] ) ) {
             $wp_post_types['portfolio_page']->show_in_rest = true;
@@ -27,6 +36,8 @@ function post_types_rest_support() {
             $wp_post_types['ai1ec_event']->rest_base = 'events';
             $wp_post_types['ai1ec_event']->rest_controller_class = 'WP_REST_Posts_Controller';
     }
+
+
   
 }
 
