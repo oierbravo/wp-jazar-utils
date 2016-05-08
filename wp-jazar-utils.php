@@ -3,7 +3,7 @@
 /*
 Plugin Name: Jazar Utils
 Plugin URI: http://wordpress.org/#
-Description: Our first filter event
+Description: Utils and Tweaks for jazar.org
 Author: Oier Bravo Urtasun
 Version: 0.0.1
 Author URI: https://github.com/oierbravo/wp-jazar-utils
