@@ -21,11 +21,11 @@ function post_types_rest_support() {
             $wp_post_types['pages']->rest_controller_class = 'WP_REST_Posts_Controller';
     }
 
-    //Añadimos portfolio_page al REST
+    //Añadimos portfolio_page al REST. -> ESPACIOS COMUNES
     if( isset( $wp_post_types[ 'portfolio_page' ] ) ) {
             $wp_post_types['portfolio_page']->show_in_rest = true;
             //setting ENDPOINT to portfolios
-            $wp_post_types['portfolio_page']->rest_base = 'portfolios';
+            $wp_post_types['portfolio_page']->rest_base = 'espacios-comunes';
             $wp_post_types['portfolio_page']->rest_controller_class = 'WP_REST_Posts_Controller';
     }
 
